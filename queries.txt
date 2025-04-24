@@ -1,0 +1,33 @@
+% Queries and Expected Outputs
+
+% 1. Who are the children of john?
+?- parent(john, X).
+% Expected: X = michael ; X = mary.
+
+% 2. Who are the siblings of mary?
+?- sibling(mary, X).
+% Expected: X = michael.
+
+% 3. Who are the grandchildren of john?
+?- grandparent(john, X).
+% Expected: X = bob ; X = lisa.
+
+% 4. Is bob a descendant of john?
+?- descendant(bob, john).
+% Expected: true.
+
+% 5. Are bob and tom cousins?
+?- cousin(bob, tom).
+% Expected: true.
+
+% 6. Is michael a sibling of mary?
+?- sibling(michael, mary).
+% Expected: true.
+
+% 7. Who are the cousins of tom?
+?- cousin(tom, X).
+% Expected: X = bob.
+
+% 8. Who are the descendants of john?
+?- descendant(X, john).
+% Expected: X = michael ; mary ; bob ; lisa ; tom.
